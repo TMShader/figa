@@ -26,14 +26,4 @@ router.get("/:user", (req, res) => {
 	});
 });
 
-router.get("/old_u/:user", (req, res) => {
-	getModel(req.params.user, function (resp) {
-		res.render("user", {
-			model: resp[0],
-			texture: resp[1],
-			user: req.params.user,
-		});
-	});
-});
-
 module.exports = router;

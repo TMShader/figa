@@ -15,10 +15,9 @@ router.get("/", (req, res) => {
 	});
 });
 
-router.get("/testing-three", (req, res) => {
-	res.render("test");
-});
-
 router.get("/login", (req, res) => {
-	res.render("login");
+	const { username, loggedIn } = req.user
+	res.render("login", {
+		loggedIn, username
+	});
 });
