@@ -1,0 +1,52 @@
+<%- include('header'); -%>
+
+    <!-- Section 2 -->
+    <section class="relative py-16 bg-white dark:bg-gray-800 min-w-screen animation-fade animation-delay">
+        <div class="container px-8 mx-auto w-max sm:px-12 xl:px-5">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <% for (var i = 0; i < 10; i++) { %>
+                <div class="h-64 w-40 rounded-md items-center justify-center text-2xl font-medium cursor-pointer bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 transition duration-150 ease-out hover:text-gray-900 dark:hover:text-white" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                    <a href="/u/TMShader/" class="block relative left-0 right-0 top-0 bottom-0">
+                        <div class="h-8 min-w-full rounded-t-md flex items-center justify-center text-base border-b border-gray-200 dark:border-gray-700">TMShader</div>
+                        <div class="h-56 min-w-full rounded-b-md flex items-center justify-center text-2xl">
+                            <img src="https://render.namemc.com/skin/3d/body.png?skin=b274720e40a84dc9&model=classic&width=280&height=280" alt="TMShader">
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3 -->
+    <section class="relative py-16 bg-white dark:bg-gray-800 min-w-screen animation-fade animation-delay">
+        <div class="container px-8 mx-auto sm:px-12 xl:px-5">
+            <p class="text-xs font-bold text-left text-lime-500 uppercase sm:mx-6 sm:text-center sm:text-normal sm:font-bold">
+                Got a Question? We’ve got answers.
+            </p>
+            <h3 class="mt-1 text-2xl font-bold text-left text-gray-800 dark:text-white sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
+                Frequently Asked Questions
+            </h3>
+            <div class="w-full px-6 py-6 mx-auto mt-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+                <h3 class="text-lg font-bold text-green-500 sm:text-xl md:text-2xl">Can you help me with a problem with my Minecraft account?</h3>
+                <p class="mt-2 text-base text-gray-600 dark:text-gray-400 sm:text-lg md:text-normal">
+                    This website is not affiliated with Mojang, the developers of Minecraft. If you need help with your Minecraft account, please contact Mojang directly.
+                </p>
+            </div>
+            <div class="w-full px-6 py-6 mx-auto mt-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+                <h3 class="text-lg font-bold text-green-500 sm:text-xl md:text-2xl">How often can I change my Minecraft username?</h3>
+                <p class="mt-2 text-base text-gray-600 dark:text-gray-400 sm:text-lg md:text-normal">
+                    You can change your Minecraft username once every 30 days.
+                </p>
+            </div>
+            <div class="w-full px-6 py-6 mx-auto mt-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+                <h3 class="text-lg font-bold text-green-500 sm:text-xl md:text-2xl">After I change my Minecraft username, when does my old username become available?</h3>
+                <p class="mt-2 text-base text-gray-600 dark:text-gray-400 sm:text-lg md:text-normal">
+                    You can switch back to your old username after 30 days. Everyone else must wait 37 days before they can switch to your old username.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<%- include('footer'); -%>
