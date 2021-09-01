@@ -13,9 +13,11 @@ const index = require("./routes/index");
 const users = require("./routes/users");
 const models = require("./routes/models");
 
+/*
 const { v4: uuidV4 } = require("uuid");
 const { getModel } = require("./model");
 const { getModel_new } = require("./model_new");
+*/
 
 dotenv.config();
 InitiateMongoServer();
@@ -29,6 +31,7 @@ app.use("/m", models);
 app.use("/api/user", api);
 app.use(cookieParser())
 
+/*
 io.sockets.on("connection", function (socket) {
 	socket.on("getModel", function (data) {
 		getModel_new(data.user, function (resp) {
@@ -36,6 +39,7 @@ io.sockets.on("connection", function (socket) {
 		});
 	});
 });
+*/
 
 const port = process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 3000;
 
@@ -43,8 +47,10 @@ server.listen(port, () => {
 	console.log(`The application started on port http://localhost:${server.address().port}`);
 });
 
+/*
 function getId(playername) {
 	return fetch(`https://api.mojang.com/users/profiles/minecraft/${playername}`)
 		.then((data) => data.json())
 		.then((player) => player.id);
 }
+*/
